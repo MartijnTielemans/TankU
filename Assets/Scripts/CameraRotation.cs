@@ -5,23 +5,16 @@ using UnityEngine;
 public class CameraRotation : MonoBehaviour
 {
     public GameObject cameraPivot;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public float speed;
+    public float curSpeed;
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetAxis("CameraLeft") > 0)
-        {
+        curSpeed = 0;
+        curSpeed += Input.GetAxis("CameraP1") + Input.GetAxis("CameraP2");
+        curSpeed *= speed;
 
-        }
-        else if (Input.GetAxis("CameraRight") > 0)
-        {
-
-        }
+        cameraPivot.transform.Rotate(0, curSpeed * Time.deltaTime, 0);
     }
 }
