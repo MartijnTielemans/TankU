@@ -5,10 +5,12 @@ using UnityEngine;
 public class Butoon : MonoBehaviour
 {
     public GameObject interactable;
+    private int pCount = 0;
 
     private void OnTriggerEnter(Collider col)
     {
-        if (col.gameObject.CompareTag("Player"))
+        pCount++;
+        if (col.gameObject.CompareTag("Player") && pCount == 1)
         {
             Debug.Log("Butoon pressed.");
             interactable.GetComponent<IInteractable>().Action("on");
@@ -17,7 +19,8 @@ public class Butoon : MonoBehaviour
 
     private void OnTriggerExit(Collider col)
     {
-        if (col.gameObject.CompareTag("Player"))
+        pCount--;
+        if (col.gameObject.CompareTag("Player") && pCount == 0)
         {
             Debug.Log("Butoon unpressed.");
             interactable.GetComponent<IInteractable>().Action("off");
