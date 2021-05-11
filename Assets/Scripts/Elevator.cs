@@ -20,26 +20,8 @@ public class Elevator : MonoBehaviour, IInteractable
         startPoint = transform.position.y;
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
-        //if (!moveUp && !moveDown)
-        //{
-
-        //}
-        //else if (moveUp)
-        //{
-        //    transform.position = new Vector3(transform.position.x, Mathf.Lerp(startPoint, endPoint, interpolation), transform.position.z);
-
-        //    if (interpolation !>= 1)
-        //    interpolation += interpolSpeed * Time.deltaTime;
-        //}
-        //else if (moveDown)
-        //{
-        //    transform.position = new Vector3(transform.position.x, Mathf.Lerp(endPoint, startPoint, interpolation), transform.position.z);
-
-        //    if (interpolation !>= 1)
-        //        interpolation += interpolSpeed * Time.deltaTime;
-        //}
         if (moveUp && interpolation <= 1)
         {
             interpolation += interpolSpeed * Time.deltaTime;
