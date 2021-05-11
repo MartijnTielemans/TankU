@@ -12,8 +12,7 @@ public class CameraRotation : MonoBehaviour
     void Update()
     {
         curSpeed = 0;
-        curSpeed += -Input.GetAxis("CameraLeftP1") + Input.GetAxis("CameraRightP1") + -Input.GetAxis("CameraLeftP2") + Input.GetAxis("CameraRightP2");
-        Debug.Log(curSpeed);
+        curSpeed += Input.GetAxis("CameraP1") + Input.GetAxis("CameraP2");
         curSpeed *= speed;
 
         cameraPivot.transform.Rotate(0, curSpeed * Time.deltaTime, 0);

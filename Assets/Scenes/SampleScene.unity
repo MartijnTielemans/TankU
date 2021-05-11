@@ -455,7 +455,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraPivot: {fileID: 983475166}
-  speed: 150
+  speed: 120
   curSpeed: 0
 --- !u!4 &1785792449
 Transform:

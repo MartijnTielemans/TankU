@@ -6,11 +6,11 @@ InputManager:
   serializedVersion: 2
   m_Axes:
   - serializedVersion: 3
-    m_Name: CameraLeft
+    m_Name: CameraP1
     descriptiveName: 
     descriptiveNegativeName: 
-    negativeButton: 
-    positiveButton: y
+    negativeButton: t
+    positiveButton: r
     altNegativeButton: 
     altPositiveButton: 
     gravity: 1000
@@ -22,11 +22,11 @@ InputManager:
     axis: 0
     joyNum: 0
   - serializedVersion: 3
-    m_Name: CameraRight
+    m_Name: CameraP2
     descriptiveName: 
     descriptiveNegativeName: 
-    negativeButton: 
-    positiveButton: u
+    negativeButton: p
+    positiveButton: o
     altNegativeButton: 
     altPositiveButton: 
     gravity: 1000
