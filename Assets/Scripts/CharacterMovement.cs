@@ -11,7 +11,7 @@ public class CharacterMovement : MonoBehaviour
     public float moveSpeed;
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if (Input.GetButton(movePlayer) && !Input.GetButton(turnPlayer))
         {
