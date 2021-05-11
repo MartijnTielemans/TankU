@@ -6,18 +6,6 @@ public class Butoon : MonoBehaviour
 {
     public GameObject interactable;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     private void OnTriggerEnter(Collider col)
     {
         if (col.gameObject.CompareTag("Player"))
@@ -32,6 +20,7 @@ public class Butoon : MonoBehaviour
         if (col.gameObject.CompareTag("Player"))
         {
             Debug.Log("Butoon unpressed.");
+            interactable.GetComponent<IInteractable>().Action("off");
         }
     }
 }
