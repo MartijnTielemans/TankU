@@ -25,10 +25,12 @@ public class Elevator : MonoBehaviour, IInteractable
         if (moveUp && interpolation <= 1)
         {
             interpolation += interpolSpeed * Time.deltaTime;
+            transform.rotation = Quaternion.Euler(0, interpolation * 360, 0);
         }
         if (moveDown && interpolation >= 0)
         {
             interpolation -= interpolSpeed * Time.deltaTime;
+            transform.rotation = Quaternion.Euler(0, interpolation * 360, 0);
         }
         transform.position = new Vector3(transform.position.x, Mathf.Lerp(startPoint, endPoint, interpolation), transform.position.z);
     }
